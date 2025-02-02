@@ -57,9 +57,10 @@ if section == "EDA":
 
     # File uploader widget for train dataset
     #train_file = st.file_uploader("dataset/train", type="csv")
-    train_file = st.sidebar.file_uploader("dataset/train", type=["csv"], key="train_data_uploader")
-    test_file = st.sidebar.file_uploader("dataset/test", type=["csv"], key="test_data_uploader")
-
+    train_file = "https://raw.githubusercontent.com/mahrukhsaeed2702/Liver_cirrhosis/main/dataset/train.csv"
+    #train_file = st.sidebar.file_uploader("dataset/train", type=["csv"], key="train_data_uploader")
+    #test_file = st.sidebar.file_uploader("dataset/test", type=["csv"], key="test_data_uploader")
+    test_file = "https://raw.githubusercontent.com/mahrukhsaeed2702/Liver_cirrhosis/main/dataset/test.csv"
     if train_file is not None:
         train = pd.read_csv(train_file)  # Convert UploadedFile to DataFrame
         st.write("Train Data Preview:")
