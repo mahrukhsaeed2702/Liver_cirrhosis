@@ -522,10 +522,10 @@ elif section == "Model Building":
 
     # Parameter grid for GridSearchCV
     rf_param_grid = {
-        'n_estimators': [100, 200],
-        'max_depth': [5, 10, None],
-        'min_samples_split': [2, 5],
-        'min_samples_leaf': [1, 2],
+        'n_estimators': [200],
+        'max_depth': [None],
+      #  'min_samples_split': [2, 5],
+       # 'min_samples_leaf': [1, 2],
     }
 
     # Random Forest with GridSearchCV
@@ -740,9 +740,9 @@ elif section == "Model Building":
 
     # Define the parameter grid for SVM
     svm_param_grid = {
-        'C': [1, 10, 100],
+        'C': [100],
         'kernel': ['rbf'],
-        'gamma': ['scale', 'auto', 0.1],
+       # 'gamma': ['scale', 'auto', 0.1],
     }
 
     # SVM with RandomizedSearchCV for faster computation
